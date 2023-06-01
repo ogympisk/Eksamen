@@ -30,6 +30,6 @@ app.get('/veileder', checkUser, requireAuth, requireAdmin, (req,res) => res.rend
 app.get('/login', (req,res)=>res.render('login'));
 app.get('/signup', (req,res)=>res.render('signup'));
 app.get('/logout', logout_get)
-app.get('/:user', checkUser, requireAuth, get_todos, realUser);
+app.get('/:user', checkUser, requireAuth, get_todos);
 app.use(authRoutes);
 

@@ -1,6 +1,6 @@
 const Todo = require('../models/Todo')
 const mongoose = require('mongoose')
-
+const User = require('../models/User')
 
 
 
@@ -48,4 +48,5 @@ module.exports.deleteTodo = async (req, res) =>{
     }
     res.status(200).json(todo)
 }
+
 

@@ -48,7 +48,7 @@ const requireAdmin = (req, res, next) => {
 } 
 const realUser = (req,res,next) =>{
     const name = user.email
-    console.log(name)
+    
 }
         
 
