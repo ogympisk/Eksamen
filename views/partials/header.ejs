@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiks ferdig</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <% if (user) { %>
+    <a href="/"><h1>Fiks ferdig</h1></a>
+    <h1><%= user.email %></h1>
+    <% } else{%>
+    <a href="/"><h1>Fiks ferdig</h1></a>
+    <%}%>
+    <ul>
+      
+
+      <% if (user) { %>
+        <% if (user.admin){%>
+        <li><a href="/veileder">Veileder</a></li>
+        <%}%>
+      <li><a href="/<%= user.email %>">Todo</a></li>
+      <li><a href="/logout">Logout</a></li>
+      <% } else{%>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Signup</a></li>
+      <% }%>
+    </ul>
+  </nav>
+ 

@@ -1,0 +1,47 @@
+<%- include('partials/header'); -%>
+<h1>Veileder</h1>
+<br>
+<br>
+<h3>Hvordan sette opp en bruker i linux med nøkkelpålogging</h3>
+<br>
+<br>
+<div>
+<h4>Steg 1: Legge til ny bruker</h4>
+<img src="Adduser1.png" alt="Bildet viser hvordan du kan legge til en bruker, ved bruk av sudo adduser ola_normann">
+<br>
+<br>
+<h4>Steg 2: Gi brukeren sudorettigheter</h4>
+<img src="Adduser2.png" alt="Gir brukeren sudorettigheter, kommandoen er sudo usermod -aG sudo ola_normann">
+<p>Tips: For å sjekke at det fungerer prøv å logg in på brukeren å kjør en sudo kommando</p>
+<br>
+<br>
+<h4>Steg 3: Sette opp nøkkelpålogging, legg til .ssh mappe</h4>
+<img src="Adduser3.png" alt="Lag ssh mappe til bruker, kommandoen er: sudo mkdir /home/ola_normann/.ssh">
+<br>
+<br>
+<h4>Steg 4: Lage authorized_keys fil</h4>
+<img src="Adduser4.png" alt="lage authorized_keys fil slik at brukeren kan logge seg in via ssh, kommandoen er sudo nano /home/ola_normann/.ssh/authorized_keys">
+<br>
+<br>
+<h4>Steg 5: Legg in public key i authorized_keys</h4>
+<img src="Adduser5.png" alt="Legg til din pub-key i mappen, og så lagre.">
+<p>Husk å lagre filen</p>
+<br>
+<br>
+<h4>Steg 6: Installere Nodejs og Npm</h4>
+<img src="Adduser6.png" alt="" srcset="Installere nodejs, kommando: sudo apt install nodejs">
+<img src="Adduser7.png" alt="" srcset="Installere npm, kommando: sudo apt install npm">
+<br>
+<br>
+<h4>Steg 7: Klon prosjektet ditt fra github</h4>
+<p>Best å lage en egen mappe å ha prosjektet i på linux</p>
+<img src="Adduser8.png" alt="Klon prosjektet ditt fra github, sudo git clone githublenke">
+<p>Du burde kjøre Sudo npm i for å få med modules</p>
+<br>
+<br>
+<h4>Steg 8: Kjør node app</h4>
+<img src="Adduser9.png" alt="kjør din node app, kommando er: sudo node app">
+<p>Slik skal det se ut når node kjører</p>
+
+</div>
+<%- include('partials/footer'); -%>
